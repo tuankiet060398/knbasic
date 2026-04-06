@@ -5,7 +5,7 @@ export default function App() {
     <div className="text-white bg-black font-sans scroll-smooth selection:bg-white selection:text-black">
       {/* NAVBAR - Thêm backdrop-blur để nhìn sang trọng hơn khi cuộn */}
       <nav className="flex justify-between items-center px-6 py-4 md:px-12 border-b border-gray-900 fixed top-0 w-full bg-black/80 backdrop-blur-md z-50">
-        <img src="img/logo_2026.jpg" className="h-10 md:h-12 lg:h-14 object-contain" alt="KN Logo" />
+        <img src="/img/logo_2026.jpg" className="h-10 md:h-12 lg:h-14 object-contain" alt="KN Logo" />
         
         {/* Menu ẩn trên mobile rất nhỏ hoặc điều chỉnh khoảng cách linh hoạt */}
         <div className="flex space-x-4 md:space-x-8 uppercase text-[10px] md:text-xs tracking-[0.2em]">
