@@ -61,7 +61,7 @@ export default function App() {
               "/img/look3.jfif",
               "/img/look4.jpg",
               "/img/look5.jpg",
-              "/img/look6.png",
+              "/img/look6.jpg",
           ].map((img, index) => (
             <div
               key={index}
