@@ -27,7 +27,10 @@ export default function App() {
         id="home"
         className="min-h-screen flex items-center justify-center relative overflow-hidden"
       >
-        <div className="absolute inset-0 bg-[url('/img/hero.jpg')] bg-cover bg-center opacity-50 transition-transform duration-1000 hover:scale-105"></div>
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-50 transition-transform duration-1000 hover:scale-105"
+        style={{ backgroundImage: "url('/img/hero.jpg')" }} 
+      ></div>
         <div className="relative text-center px-4 space-y-6">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tighter">
             DEFINE YOUR STYLE
