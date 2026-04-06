@@ -3,11 +3,9 @@ import { Mail } from "lucide-react";
 export default function App() {
   return (
     <div className="text-white bg-black font-sans scroll-smooth selection:bg-white selection:text-black">
-      {/* NAVBAR - Thêm backdrop-blur để nhìn sang trọng hơn khi cuộn */}
       <nav className="flex justify-between items-center px-6 py-4 md:px-12 border-b border-gray-900 fixed top-0 w-full bg-black/80 backdrop-blur-md z-50">
         <img src="/img/logo_2026.jpg" className="h-10 md:h-12 lg:h-14 object-contain" alt="KN Logo" />
         
-        {/* Menu ẩn trên mobile rất nhỏ hoặc điều chỉnh khoảng cách linh hoạt */}
         <div className="flex space-x-4 md:space-x-8 uppercase text-[10px] md:text-xs tracking-[0.2em]">
           {["home", "about", "lookbook", "contact"].map((item) => (
             <a
@@ -22,7 +20,6 @@ export default function App() {
         </div>
       </nav>
 
-      {/* HERO - Tối ưu typography linh hoạt */}
       <section
         id="home"
         className="min-h-screen flex items-center justify-center relative overflow-hidden"
@@ -41,7 +38,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* ABOUT - Cân đối lại khoảng cách */}
       <section id="about" className="py-24 px-6 md:px-12 text-center max-w-4xl mx-auto">
         <h2 className="text-2xl md:text-3xl mb-8 tracking-widest font-light">ABOUT</h2>
         <div className="text-gray-400 space-y-6 leading-relaxed text-sm md:text-base">
@@ -55,7 +51,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* LOOKBOOK GRID - Responsive Grid thông minh hơn */}
       <section id="lookbook" className="py-12 px-4 md:px-8">
         <h2 className="text-2xl md:text-3xl mb-12 text-center tracking-widest font-light">LOOKBOOK</h2>
 
