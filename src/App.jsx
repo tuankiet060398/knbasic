@@ -39,7 +39,7 @@ export default function App() {
         <div className="relative text-center px-4 space-y-6">
           <Reveal>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extralight tracking-tight">
-              DEFINE YOUR STYLE
+              Minimal Fashion - KN Basic
             </h1>
           </Reveal>
           
