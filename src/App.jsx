@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion"; 
 import Reveal from "/components/Reveal";
 
@@ -65,7 +65,7 @@ export default function App() {
                 <img
                     src="/img/look1.jpg"
                     className="w-full h-[600px] object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out scale-100 hover:scale-105"
-                    alt="About KN"
+                    alt="Thời trang nam tối giản KN Kylin Novel- Minimal Menswear Local Brand"
                 />
             </div>
           </Reveal>
@@ -142,19 +142,33 @@ export default function App() {
       {/* CONTACT SECTION */}
       <section id="contact" className="py-32 px-6 text-center border-t border-gray-900">
         <Reveal>
-          <h2 className="text-2xl md:text-3xl mb-12 tracking-widest font-light">CONTACT</h2>
+          <h2 className="text-2xl md:text-3xl mb-16 tracking-widest font-light uppercase">CONTACT</h2>
         </Reveal>
 
-        <div className="flex flex-col items-center space-y-12">
-          <Reveal delay={0.2}>
-            <a
-              href="mailto:kn.gubasic@gmail.com"
-              className="flex items-center gap-3 text-gray-400 hover:text-white transition-all text-sm md:text-lg group"
-            >
-              <Mail size={20} strokeWidth={1} className="group-hover:scale-110 transition-transform" />
-              <span className="tracking-wider">kn.gubasic@gmail.com</span>
-            </a>
-          </Reveal>
+        <div className="flex flex-col items-center space-y-12 max-w-2xl mx-auto">
+          
+          {/* Email & Address */}
+          <div className="space-y-6">
+            <Reveal delay={0.1}>
+              <a
+                href="mailto:kn.gubasic@gmail.com"
+                className="flex items-center justify-center gap-3 text-gray-400 hover:text-white transition-all text-sm md:text-base group"
+              >
+                <Mail size={18} strokeWidth={1} />
+                <span className="tracking-wider">kn.gubasic@gmail.com</span>
+              </a>
+            </Reveal>
+
+            <Reveal delay={0.2}>
+              <div className="flex items-start justify-center gap-3 text-gray-400 text-sm md:text-base">
+                <MapPin size={18} strokeWidth={1} className="mt-1 flex-shrink-0" />
+                <address className="not-italic tracking-wide leading-relaxed">
+                  2825 Lý Thái Tổ, Phú Hữu, <br className="md:hidden" />
+                  Đại Phước, Nhơn Trạch, Đồng Nai
+                </address>
+              </div>
+            </Reveal>
+          </div>
 
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 uppercase text-[10px] md:text-xs tracking-[0.3em]">
             {["Shopee", "TikTok", "Instagram"].map((platform, idx) => (
