@@ -1,8 +1,20 @@
 import { Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"; // Thêm router
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Reveal from "/components/Reveal";
+import Collection from "./pages/CollectionDetail";
 
-export default function App() {
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
+function Home() {
   return (
     <div className="text-white bg-black font-sans scroll-smooth selection:bg-white selection:text-black">
 
@@ -193,7 +205,7 @@ export default function App() {
             id="lookbook-heading"
             className="text-2xl md:text-3xl mb-4 text-center tracking-widest font-light"
           >
-            LOOKBOOK — KN BASIC 2026
+            LOOKBOOK — KN BASIC
           </h2>
           <p className="text-center text-gray-500 text-xs tracking-[0.25em] uppercase mb-16">
             Minimal Menswear Collection – Kylin Novel
@@ -203,60 +215,69 @@ export default function App() {
         <div
           className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8"
           role="list"
-          aria-label="KN Basic 2026 lookbook gallery"
+          aria-label="KN Basic lookbook gallery"
         >
           {[
             {
+              id: "look-01",
               src: "/img/look1.jpg",
               alt: "KN Basic Look 1 – tonal minimal outfit by Kylin Novel Vietnam local brand 2026",
               label: "Look 01",
             },
             {
+              id: "look-02",
               src: "/img/look2.jpg",
               alt: "KN Basic Look 2 – minimal menswear set by Kylin Novel, clean silhouette",
               label: "Look 02",
             },
             {
-              src: "/img/look3.jfif",
+              id: "look-03",
+              src: "/img/look3.jpg",
               alt: "KN Basic Look 3 – monochrome minimal outfit KN Atelier 2026",
               label: "Look 03",
             },
             {
+              id: "look-04",
               src: "/img/look4.jpg",
               alt: "KN Basic Look 4 – oversized minimal men's fashion by Kylin Novel local brand",
               label: "Look 04",
             },
             {
-              src: "/img/look5.jpg",
+              id: "look-05",
+              src: "/img/29052026/hero_slim_1.jpg",
               alt: "KN Basic Look 5 – black and white minimal menswear KN Basic Vietnam",
               label: "Look 05",
             },
             {
+              id: "look-06",
               src: "/img/look6.jpg",
               alt: "KN Basic Look 6 – Kylin Novel minimal menswear collection Vietnam 2026",
               label: "Look 06",
             },
           ].map((item, index) => (
             <Reveal key={index} delay={(index % 3) * 0.1}>
-              <figure
-                className="relative overflow-hidden group bg-zinc-900 aspect-[3/4] cursor-pointer m-0"
-                role="listitem"
-                itemScope
-                itemType="https://schema.org/ImageObject"
-              >
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition duration-[1.5s] ease-in-out"
-                  loading="lazy"
-                  itemProp="contentUrl"
-                />
-                <figcaption className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                  <span className="text-[10px] tracking-[0.4em] border border-white px-4 py-2">
-                    {item.label}
-                  </span>
-                </figcaption>
-              </figure>
+              {/* Bọc bằng thẻ Link để định tuyến sang trang Collection */}
+              <Link to={`/collection/${item.id}`} className="block">
+                <figure
+                  className="relative overflow-hidden group bg-zinc-900 aspect-[3/4] cursor-pointer m-0"
+                  role="listitem"
+                  itemScope
+                  itemType="https://schema.org/ImageObject"
+                >
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition duration-[1.5s] ease-in-out"
+                    loading="lazy"
+                    itemProp="contentUrl"
+                  />
+                  <figcaption className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <span className="text-[10px] tracking-[0.4em] border border-white px-4 py-2">
+                      {item.label}
+                    </span>
+                  </figcaption>
+                </figure>
+              </Link>
             </Reveal>
           ))}
         </div>
@@ -370,5 +391,17 @@ export default function App() {
         </p>
       </footer>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <ScrollToTop /> {/* Đảm bảo cuộn lên đầu khi bấm xem collection */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/collection/:id" element={<Collection />} />
+      </Routes>
+    </Router>
   );
 }
