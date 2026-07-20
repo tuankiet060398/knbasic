@@ -254,6 +254,12 @@ function Home() {
               alt: "KN Basic Look 6 – Kylin Novel minimal menswear collection Vietnam 2026",
               label: "Look 06",
             },
+            {
+              id: "look-07",
+              src: "/img/look7.jpg",
+              alt: "KN Basic Look 7 – Kylin Novel minimal menswear collection Summer 2026 Vietnam",
+              label: "Look 07",
+            },
           ].map((item, index) => (
             <Reveal key={index} delay={(index % 3) * 0.1}>
               {/* Bọc bằng thẻ Link để định tuyến sang trang Collection */}

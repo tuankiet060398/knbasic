@@ -43,6 +43,22 @@ const collectionData = {
     description: "Minimal is not simple. It is intentional. The definitive conclusion of the KN Basic 2026 series.",
     images: ["/img/look6.jpg", "/img/look4.jpg", "/img/look5.jpg"]
   }
+  ,
+  "look-07": {
+    title: "LOOK 07 — SUMMER VIBES",
+    description: "Lightweight and breathable pieces designed for the warm season, maintaining the brand's signature minimal aesthetic.",
+    images: ["/img/summer72026/1.jpg", "/img/summer72026/2.jpg", "/img/summer72026/3.jpg",
+            "/img/summer72026/4.jpg", "/img/summer72026/5.jpg", "/img/summer72026/6.jpg",
+            "/img/summer72026/7.jpg", "/img/summer72026/8.jpg", "/img/summer72026/9.jpg", "/img/summer72026/10.jpg",
+            "/img/summer72026/11.jpg", "/img/summer72026/12.jpg", "/img/summer72026/13.jpg", "/img/summer72026/14.jpg", "/img/summer72026/15.jpg",
+            "/img/summer72026/16.jpg", "/img/summer72026/17.jpg", "/img/summer72026/18.jpg", "/img/summer72026/19.jpg", "/img/summer72026/19.1.PNG", "/img/summer72026/20.jpg",
+            "/img/summer72026/21.jpg", "/img/summer72026/22.jpg", "/img/summer72026/23.jpg", "/img/summer72026/24.jpg", "/img/summer72026/25.jpg",
+            "/img/summer72026/26.jpg", "/img/summer72026/27.jpg", "/img/summer72026/28.jpg", "/img/summer72026/29.jpg", "/img/summer72026/30.jpg",
+            "/img/summer72026/31.jpg", "/img/summer72026/32.jpg", "/img/summer72026/33.jpg", "/img/summer72026/34.jpg", "/img/summer72026/35.jpg",
+            "/img/summer72026/36.jpg", "/img/summer72026/37.jpg", "/img/summer72026/38.jpg", "/img/summer72026/39.jpg", "/img/summer72026/40.jpg",
+            "/img/summer72026/41.jpg", "/img/summer72026/42.jpg", "/img/summer72026/43.jpg", "/img/summer72026/44.jpg", "/img/summer72026/45.jpg",
+             "/img/summer72026/46.jpg", "/img/summer72026/47.jpg", "/img/summer72026/48.jpg", "/img/summer72026/49.jpg", "/img/summer72026/50.jpg","/img/summer72026/51.jpg"]
+  }
 };
 
 export default function CollectionDetail() {
